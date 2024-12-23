@@ -30,12 +30,7 @@ def bonneteau():
 import random
 def jeu_lance_des():
     max=3
-    des1_joueur= random.randint(1,6)
-    des2_joueur= random.randint(1,6)
-    des1_maitre= random.randint(1,6)
-    des2_maitre= random.randint(1,6)
-    tuple_joueur = (des1_joueur,des2_joueur)
-    tuple_maitre= (des1_maitre,des2_maitre)
+
 
     for essai in range(max):
         essais_restants= max - essai
@@ -67,7 +62,17 @@ def jeu_lance_des():
     print("Aucun joueur n'a obtenu un 6 après trois essais. C'est un match nul.")
     return False
 
-print(jeu_lance_des())
+
+
+
+def epreuve_hasard():
+    epreuves = [bonneteau, jeu_lance_des]
+    epreuve = random.choice(epreuves)
+
+    return epreuve()
+
+print(epreuve_hasard())
+
 
 
 
