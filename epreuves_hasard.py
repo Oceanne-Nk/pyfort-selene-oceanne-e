@@ -24,7 +24,54 @@ def bonneteau():
     print("Désolé, vous avez perdu. La clé se trouvait sous le bonneteau {}".format(value))
     return False
 
-print(bonneteau())
 
-?
+
+
+import random
+def jeu_lance_des():
+    max=3
+    des1_joueur= random.randint(1,6)
+    des2_joueur= random.randint(1,6)
+    des1_maitre= random.randint(1,6)
+    des2_maitre= random.randint(1,6)
+    tuple_joueur = (des1_joueur,des2_joueur)
+    tuple_maitre= (des1_maitre,des2_maitre)
+
+    for essai in range(max):
+        essais_restants= max - essai
+        print("Il reste {} essais".format(essais_restants))
+
+
+        input("Appuyez sur 'Entrée' pour lancer les dés du joueur")
+
+        des1_joueur = random.randint(1, 6)
+        des2_joueur = random.randint(1, 6)
+        tuple_joueur = (des1_joueur, des2_joueur)
+        print("Le joueur a obtenu : {} et {}".format(des1_joueur, des2_joueur))
+        if 6 in tuple_joueur:
+            print("Félicitations ! Le joueur a obtenu un 6 et remporte la partie et la clé.")
+            return True
+
+        input("Appuyez sur 'Entrée' pour lancer les dés du maître du jeu")
+        des1_maitre = random.randint(1, 6)
+        des2_maitre = random.randint(1, 6)
+        tuple_maitre = (des1_maitre, des2_maitre)
+        print("Le maître du jeu a obtenu : {} et {}".format(des1_maitre, des2_maitre))
+
+        if 6 in tuple_maitre:
+            print("Le maître du jeu a obtenu un 6 et remporte la partie")
+            return False
+
+        print("Aucun joueur n'a obtenu un 6. Passons au prochain essai.")
+
+    print("Aucun joueur n'a obtenu un 6 après trois essais. C'est un match nul.")
+    return False
+
+print(jeu_lance_des())
+
+
+
+
+
+
 
