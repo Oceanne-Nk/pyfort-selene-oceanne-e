@@ -1,4 +1,4 @@
-# Exercice 3.4 : Le module enigme_pere_fouras.py
+#Exercice 3.4 : Le module enigme_pere_fouras.py
 
 #L'objectif de cet exercice est d'implémenter deux fonctions simulant une rencontre avec le Père Fouras, où nous devons résoudre une énigme en trois tentatives pour gagner une clé, sinon un message de défaite avec la solution est affiché.
 
