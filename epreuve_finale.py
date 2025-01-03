@@ -17,7 +17,7 @@ def salle_De_Tresor(fichier):
     mot_code = donnees['MOT-CODE'].strip()
 
         # Afficher les trois premiers indices
-    print("Indices : {}".format(indices))
+
     for indice in indices[:3]:
         print("- {}".format(indice))
 
