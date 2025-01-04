@@ -88,7 +88,6 @@ def epreuve_hasard():
 
     return epreuve()
 
-print(epreuve_hasard())
 
 
 

@@ -127,7 +127,7 @@ def epreuve_math():
 
     return epreuve()
 
-print(epreuve_math())
+
 
 
 

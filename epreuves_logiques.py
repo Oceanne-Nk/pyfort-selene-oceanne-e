@@ -166,4 +166,3 @@ def jeu_tictactoe():
             print("Le maître du jeu 'O' a gagné !" if verifier_victoire(grille, "O") else "Match nul !")
             return False  # Retourne False si 'O' a gagné ou match nul
 
-jeu_tictactoe()

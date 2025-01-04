@@ -7,7 +7,7 @@ def introduction():
 
 
 # Appel de la fonction introduction
-introduction()
+
 
 
 def composer_equipe():
@@ -59,11 +59,6 @@ def composer_equipe():
 
 
 # Exemple d'appel de la fonction
-equipe = composer_equipe()
-print("\nL'équipe a été composée :")
-for joueur in equipe:
-    print(f"{joueur['nom']} ({joueur['profession']}) - Leader: {'Oui' if joueur['leader'] else 'Non'}")
-
 
 def menu_epreuves():
     # Affichage du menu des épreuves
@@ -86,9 +81,6 @@ def menu_epreuves():
     return choix
 
 
-# Exemple d'appel de la fonction
-choix_epreuve = menu_epreuves()
-print(f"\nVous avez choisi l'épreuve numéro {choix_epreuve}.")
 
 
 def choisir_joueur(equipe):
@@ -106,6 +98,3 @@ def choisir_joueur(equipe):
     return equipe[choix_joueur - 1]
 
 
-# Exemple d'appel de la fonction choisir_joueur
-joueur_selectionne = choisir_joueur(equipe)
-print(f"\nLe joueur sélectionné est {joueur_selectionne['nom']} ({joueur_selectionne['profession']}).")

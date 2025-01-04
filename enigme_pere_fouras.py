@@ -42,4 +42,3 @@ def enigme_pere_fouras(fichier):
                 print("Vous avez échoué ! La solution était : {}".format(enigme_choisie['reponse']))
                 return False
 
-print(enigme_pere_fouras("data/enigmesPF.json"))

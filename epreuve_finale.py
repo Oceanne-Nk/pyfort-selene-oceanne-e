@@ -49,4 +49,3 @@ def salle_De_Tresor(fichier):
 
 
 # Exécuter le jeu
-salle_De_Tresor("data/indicesSalle.json")
