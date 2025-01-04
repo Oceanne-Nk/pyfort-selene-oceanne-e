@@ -1,11 +1,10 @@
+# FORT BOYARD SIMULATOR : Sélène AKDOGAN et Océanne TSANE :
 #Dans Fort Boyard, l'épreuve du hasard supervise les défis et guide les joueurs à travers diverses épreuves, tout en étant aussi leur adversaire lors de certaines épreuves. Nous implémenterons des jeux où le joueur s'affronte directement avec le maître du jeu.
-
-
 
 # Exercice 3.2.1 : Bonneteau (faible)
 # Dans cette épreuve, Le joueur doit deviner sous quel bonneteau se cache la clé parmi trois, avec deux essais, la clé étant placée aléatoirement à chaque essai.
 
-# Donc on implémente une fonction qui gère un jeu où le joueur doit deviner sous quel bonneteau (A, B ou C) se cache la clé en deux tentatives, et déclare la victoire ou la défaite en fonction du résultat.
+# Donc on implémente une fonction qui gère un jeu où le joueur doit deviner sous quel bonneteau (A, B ou C) se cache la clé en deux tentatives, et déclare la victoire ou la défaite en fonction du résultat. Retourne True si le joueur trouve la clé, sinon False après deux essais.
 import random
 def bonneteau():
 # On définit les bonneteaux possibles (A, B, C)
@@ -40,7 +39,7 @@ def bonneteau():
 
 
 # Exercice 3.2.2 : Lancer de dés (moyenne)
-# Dans cette épreuve, on implémente une fonction jeu_lance_des() qui simule un jeu où le joueur et le maître du jeu lancent chacun deux dés, et le premier à obtenir un 6 dans un maximum de trois essais remporte la partie.
+# Dans cette épreuve, on implémente une fonction jeu_lance_des() qui simule un jeu où le joueur et le maître du jeu lancent chacun deux dés, et le premier à obtenir un 6 dans un maximum de trois essais remporte la partie. La fonction retourne True si le joueur gagne, et False si le maître gagne ou si aucun d'eux ne remporte après trois essais..
 
 import random
 def jeu_lance_des():

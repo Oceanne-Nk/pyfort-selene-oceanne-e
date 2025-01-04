@@ -1,6 +1,10 @@
+# FORT BOYARD SIMULATOR : Sélène AKDOGAN et Océanne TSANE :
+#Exercice 3.5. Le module epreuve_finale.py
+#Le module simule la dernière étape du jeu où l’équipe, après avoir collecté toutes les clés, doit résoudre un code pour accéder à la salle du trésor en utilisant des indices et un mot-code.
 import json
 import random
 
+#La fonction salle_De_Tresor(fichier) charge les données d'un fichier JSON, choisit aléatoirement une émission et une année, puis demande au joueur de deviner un mot-code en utilisant des indices, avec trois essais pour répondre correctement.
 def salle_De_Tresor(fichier):
     with open(fichier, 'r', encoding='utf-8') as f:
         jeu_tv = json.load(f)

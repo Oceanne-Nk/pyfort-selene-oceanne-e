@@ -1,3 +1,7 @@
+# FORT BOYARD SIMULATOR : Sélène AKDOGAN et Océanne TSANE :
+#Dans le module fonctions_utiles.py, on doitimplémenter plusieurs fonctions qui géreront les joueurs, les épreuves, et l'enregistrement des résultats du jeu. Ces fonctions seront utilisées pour organiser et suivre le déroulement du jeu.
+
+#La fonction introduction() affiche un message de bienvenue et présente le contexte du jeu. Elle informe le joueur de l'objectif principal : obtenir trois clés magiques pour accéder à la salle du trésor. Ce message sert à immerger le joueur dans l'aventure, en le préparant aux épreuves à venir. La fonction ne retourne rien, elle se contente de l'affichage des instructions.
 def introduction():
     print("Bienvenue, aventurier !")
     print("Prépare-toi pour un voyage épique où des épreuves t'attendent à chaque coin de rue.")
@@ -6,15 +10,14 @@ def introduction():
     print("C'est parti ! La chasse aux clés commence maintenant. Bonne chance, et que la chance soit avec toi !")
 
 
-# Appel de la fonction introduction
 
 
-
+#La fonction composer_equipe() permet de créer une équipe en ajoutant des joueurs à une liste.
 def composer_equipe():
     # Liste pour stocker les joueurs
     equipe = []
 
-    # Demander le nombre de joueurs avec validation sans utiliser break
+
     nb_joueurs = 0
     while nb_joueurs < 1 or nb_joueurs > 3:
         nb_joueurs = int(input("Combien de joueurs voulez-vous inscrire dans l'équipe ? (max 3) : "))
@@ -58,8 +61,7 @@ def composer_equipe():
     return equipe
 
 
-# Exemple d'appel de la fonction
-
+#La fonction menu_epreuves() affiche un menu d'options pour choisir une épreuve. Elle présente quatre options à l'utilisateur : mathématiques, logique, hasard et l'énigme du Père Fouras.
 def menu_epreuves():
     # Affichage du menu des épreuves
     print("\nChoisissez une épreuve :")
@@ -68,8 +70,8 @@ def menu_epreuves():
     print("3. Épreuve du hasard")
     print("4. Énigme du Père Fouras")
 
-    # Demande du choix à l'utilisateur et vérification de la validité
-    choix_valide = False  # Initialisation de la variable de contrôle
+    # Demande du choix à l'utilisateur
+    choix_valide = False  # Initialisation de la variable
     while not choix_valide:
         choix = int(input("Choix : "))
         if 1 <= choix <= 4:
@@ -82,7 +84,7 @@ def menu_epreuves():
 
 
 
-
+#La fonction choisir_joueur(equipe) permet à l'utilisateur de choisir un joueur parmi ceux présents dans l'équipe pour participer à une épreuve.
 def choisir_joueur(equipe):
     print("\nVoici les joueurs disponibles :")
     for i, joueur in enumerate(equipe):

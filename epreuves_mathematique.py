@@ -1,8 +1,8 @@
+# FORT BOYARD SIMULATOR : Sélène AKDOGAN et Océanne TSANE :
 # Exercice 3.1.1 : Epreuve de la Facorielle (faible)
-
 # Cette épreuve génère un nombre aléatoire n, demande au joueur de calculer n!, puis compare sa réponse à la solution correcte et renvoie True si la réponse est correcte, sinon False.
 
-# Débutons cette épreuve. Nous devons tout d'abord implémenter une fonction qui calcule la factorielle de n
+# Débutons cette épreuve. Nous devons tout d'abord implémenter une fonction qui calcule la factorielle de n et la retourne
 import random
 def factorielle(n):
     if n==0:

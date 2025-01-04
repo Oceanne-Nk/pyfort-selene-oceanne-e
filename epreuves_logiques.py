@@ -1,3 +1,8 @@
+# FORT BOYARD SIMULATOR : Sélène AKDOGAN et Océanne TSANE :
+#Exercice 3.3. Le module epreuves_logiques.py - 3.3.2. Le Morpion ou tic-tac-toe (Moyenne)
+#Le joueur et le maître du jeu (IA) s’a_rontent dans une partie classique de morpion. Le premier à aligner trois symboles identiques (horizontalement, verticalement, ou en diagonale) gagne la partie. Le maître du jeu utilise une stratégie simple pour tenter de gagner ou bloquer le joueur.
+
+#La fonction afficher_grille(grille) affiche une grille de jeu (représentée par une liste de listes) dans un format lisible, sans retourner de valeur.
 def afficher_grille(grille):
 
     for ligne in grille:
@@ -44,6 +49,7 @@ def verifier_victoire(grille, symbole):
     return False
 
 
+#La fonction verifier_victoire(grille, symbole) vérifie si un joueur (représenté par symbole) a gagné dans une grille de Tic-Tac-Toe (3x3), en inspectant les lignes, les colonnes et les deux diagonales, et retourne True si une victoire est détectée, sinon False.
 def grille_complete(grille):
     for ligne in grille:
         for case in ligne:
@@ -51,7 +57,7 @@ def grille_complete(grille):
                 return False
     return True
 
-
+#La fonction verifier_resultat(grille) détermine le résultat d'une partie de Tic-Tac-Toe en vérifiant si un joueur (X ou O) a gagné, ou si la grille est complète (ce qui signifie un match nul), et retourne True si le jeu est terminé, sinon False si la partie continue.
 def verifier_resultat(grille):
 
     if verifier_victoire(grille, "X"):
@@ -62,7 +68,7 @@ def verifier_resultat(grille):
         return True  # Match nul
     return False  # La partie continue
 
-
+#La fonction coup_maitre(grille, symbole) détermine le prochain coup à jouer pour le maître du jeu ('O')
 def coup_maitre(grille, symbole):
     """Détermine le coup du maître ('O') en priorité pour gagner, bloquer ou jouer aléatoirement."""
     # Vérifier pour gagner ou bloquer
@@ -94,11 +100,13 @@ def coup_maitre(grille, symbole):
             if grille[i][j] == " ":
                 return (i, j)
 
-
+#La fonction est_entier(valeur) vérifie si la chaîne de caractères valeur peut être convertie en entier en s'assurant que tous les caractères de la chaîne sont des chiffres numériques. Elle retourne True si c'est le cas, et False sinon.
 def est_entier(valeur):
     """Vérifie si la valeur peut être convertie en entier."""
     return valeur.isnumeric()
 
+
+#La fonction tour_joueur(grille) permet au joueur 'X' de choisir une case pour son coup dans une grille de Tic-Tac-Toe
 def tour_joueur(grille):
     """Permet au joueur 'X' de choisir une case pour son coup."""
     valide = False  # Nous initialisons la condition de validité à False
@@ -139,13 +147,15 @@ def tour_joueur(grille):
                 else:
                     print("Cette case est déjà occupée. Essayez une autre.")
 
+
+#a fonction tour_maitre(grille) permet au maître ('O') de jouer son coup dans une partie de Tic-Tac-Toe.
 def tour_maitre(grille):
     """Permet au maître 'O' de jouer son coup."""
     print("Coup du maître (O) :")
     ligne, colonne = coup_maitre(grille, "O")
     grille[ligne][colonne] = "O"
 
-
+#La fonction jeu_tictactoe() orchestre le jeu du Tic-Tac-Toe (morpion) entre un joueur et le maître
 def jeu_tictactoe():
     """Orchestre le jeu du Tic-Tac-Toe entre un joueur et le maître."""
     grille = [[" " for _ in range(3)] for _ in range(3)]  # Initialisation de la grille vide

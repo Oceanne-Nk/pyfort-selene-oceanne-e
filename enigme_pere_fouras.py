@@ -1,5 +1,5 @@
+# FORT BOYARD SIMULATOR : Sélène AKDOGAN et Océanne TSANE :
 #Exercice 3.4 : Le module enigme_pere_fouras.py
-
 #L'objectif de cet exercice est d'implémenter deux fonctions simulant une rencontre avec le Père Fouras, où nous devons résoudre une énigme en trois tentatives pour gagner une clé, sinon un message de défaite avec la solution est affiché.
 
 #Nous importons d'abord le module JSON pour travailler avec des données JSON. Puis le module random pour choisir une énigme de manière aléatoire.
@@ -7,13 +7,13 @@
 import json
 import random
 
-#Nous créeons ensuite une fonction pour charger les énigmes à partir d'un fichier JSON.
+#Nous créeons ensuite une fonction charger_enigmes(fichier) charge et retourne les données d'un fichier JSON spécifié par fichier, contenant des énigmes sous forme de dictionnaire Python.
 def charger_enigmes(fichier):
     with open(fichier, 'r', encoding='utf-8') as f:
         enigmes = json.load(f)      #Nous implémentons le contenu du fichier JSON dans une variable 'enigmes'.
     return enigmes
 
-#Nous créeons ensuite une fonction qui simule une rencontre avec le Père Fouras et qui pose une énigme aléatoire au joueur.
+#Nous créeons ensuite une fonction enigme_pere_fouras(fichier) utilise la fonction charger_enigmes pour récupérer les énigmes du fichier et pose une énigme aléatoire au joueur en vérifiant sa réponse sur trois tentatives.
 def enigme_pere_fouras(fichier):
 
     enigmes = charger_enigmes(fichier)      #Nous appelons  la fonction 'charger_enigmes'
